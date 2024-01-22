@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Responsive und UI</title>
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="font-face.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="javascript.js"></script>
+</head>
+
+<body>
+ 
+  <div data-role="page" class="ui-widget">
+    <div data-role="header">
+      <h1>Responsive und UI</h1>
+    
+    </div>
+
+    <div data-role="content">
+      <div data-role="tabs">
+        <ul>
+          <li><a href="#tab1">Crypto</a></li>
+          <li><a href="#tab2">NFTs</a></li>
+          <li><a href="#tab3">Tokens</a></li>
+        </ul>
+
+        <div id="tab1">
+          <p id="kryptoheader">Cryptos:</p>
+          <label for="cryptoSorte"></label>
+          <input type="text" id="cryptoSorte" placeholder="Welche Crypto suchen Sie?">
+        </div>
+
+        <div id="dialog" title="Vorsicht!">
+          <p>Diese Kryptowaehrung ist derzeit leider nicht verfeugbar."</p>
+        </div>
+
+        <div id="tab2">
+          <p>NFTs:</p>
+          <label for="radio1">CryptoPunks</label>
+          <input type="radio" name="radio" id="radio1" value="M">
+          <br>
+          <label for="radio2">Bored Ape Yacht Club</label>
+          <input type="radio" name="radio" id="radio2" value="F">
+          <br>
+          <label for="radio3">K3-Art</label>
+          <input type="radio" name="radio" id="radio3" value="D">
+        </div>
+
+        <div id="tab3">
+          <p>Tokens</p>
+          
+          <div data-role="collapsible-set">
+            <div data-role="collapsible">
+              <h3>Teil 1</h3>
+              <div data-role="controlgroup">
+                <br>
+                <label for="usdt">Tether (USDT)</label>
+                <input type="checkbox" id="usdt" name="vegetable" value="usdt">
+                <label for="comp">Compound (COMP)</label>
+                <input type="checkbox" id="comp" name="vegetable" value="comp">
+                <label for="uni">Uniswap (UNI)</label>
+                <input type="checkbox" id="uni" name="vegetable" value="uni">
+              </div>
+            </div>
+            <div data-role="collapsible">
+              <h3>Teil 2</h3>
+              <div data-role="controlgroup">
+                <br>
+                <label for="chainlink">Chainlink (LINK)</label>
+                <input type="checkbox" id="chainlink" name="vegetable" value="chainlink">
+                <label for="aave">Aave (AAVE)</label>
+                <input type="checkbox" id="aave" name="vegetable" value="aave">
+                <label for="busd">Binance USD (BUSD)</label>
+                <input type="checkbox" id="busd" name="vegetable" value="busd">
+              </div>
+            </div>
+            <div data-role="collapsible">
+              <h3>Teil 3</h3>
+              <div data-role="controlgroup">
+                <br>
+                <label for="eth">Ethereum (ETH)</label>
+                <input type="checkbox" id="eth" name="vegetable" value="eth">
+                <label for="btt">BitTorrent (BTT)</label>
+                <input type="checkbox" id="btt" name="vegetable" value="btt">
+                <label for="doge">Dogecoin (DOGE)</label>
+                <input type="checkbox" id="doge" name="vegetable" value="doge">
+              </div>
+            </div>
+          </div>
+
+          <div class="submit-button-container">
+            <button type="submit" class="submit-button">In den Einkaufswagen</button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div data-role="header">
+      <div id="ticker"></div>
+    </div>
+  
+  </div>
+
+  <div id="popup2" class="popup2">
+    <div class="popup-content-center2">
+      <div class="popup-content2">
+        <h2>Game Over!</h2>
+        <p>"I find your lack of faith disturbing!"</p>
+        <address>Darth Vader</address>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>

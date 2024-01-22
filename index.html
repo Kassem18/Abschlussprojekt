@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AbschlussprojektJS</title>
+
+
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="font-face.css">
+
+<script src="javascript.js"></script>
+
+
+<!-- favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="finance.png">
+<link rel="icon" type="image/png" sizes="16x16" href="finance.png">
+<link rel="apple-touch-icon" sizes="180x180" href="finance.png">
+<link rel="manifest" href="site.webmanifest">
+
+
+<script>
+
+/* the only javascript code in html */
+  /* alert password "root"*/
+  let password = "root";
+
+  // Check if the password has already been entered
+  if (!sessionStorage.getItem('passwordEntered')) {
+    let attempts = 3;
+
+    while (attempts > 0) {
+      let input = prompt("Bitte Passwort eingeben:");
+      if (input === password) {
+        sessionStorage.setItem('passwordEntered', 'true');
+        break;
+      } else {
+        attempts--;
+      }
+    }
+
+    if (attempts === 0) {
+      alert("Maximale Anzahl von Anmeldeversuchen erreicht. Programm wird abgebrochen.");
+    }
+  }
+
+</script>
+</head>
+<body>
+
+
+    <form class="websiteContent1 ">
+
+      <h1 class="animated-text">"Welcome to the Dark Side!"</h1>
+        <label>
+          <br>
+          <select name="top4" size="1" onchange="openPage(this.value)">
+            <option value="">Bitte wählen:</option>
+            <option value="namenspeicher.html">Namenspeicher</option>
+            <option value="dragndrop.html">Drag'n'Drop</option>
+            <option value="heutchenspiel.html">Hütchenspiel</option>
+            <option value="responsive.html">Responsive und UI</option>
+          </select>
+          
+        </label>
+      </form>
+       <!--  music -->
+  <!--      <audio id="music" src="/AbschlussprojektJS/Unseen Horrors.mp3" autoplay loop></audio> VSCODE Go live --> 
+  <audio id="music" src="http://localhost/AJAX%20-%20jQuery/AbschlussprojektJS/Unseen%20Horrors.mp3" autoplay loop></audio>
+
+      <div id="popup" class="popup">
+        <div class="popup-content-center">
+        <div class="popup-content">
+          <h2>Welcome!</h2>
+          <p>"May the Force be with you!"</p>
+          <button id="closeBtn">Schließen</button>
+        </div>
+      </div>
+      </div>
+      
+      
+</body>
+</html>

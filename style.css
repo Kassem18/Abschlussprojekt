@@ -1,0 +1,461 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto Mono';
+
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(img/galaxy.jpg);
+  background-size: cover;
+}
+
+
+/* for the drag and drop and heutchenspiel pages */
+#websiteContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: white;
+  position: relative;
+}
+
+/* for the first two pages */
+.websiteContent1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(0deg, rgb(8, 7, 7) 0%, rgba(76, 24, 69, 0.922) 100%);
+  color: white;
+  border: solid white 1px;
+  width: 600px;
+  height: 600px;
+  border-radius: 10px;
+  opacity: 0.8;
+  position: relative;
+}
+
+
+/* #backbutton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+ */
+
+
+/* animation for the header */
+h1 {
+  text-align: center;
+  text-align: center;
+  animation: bounce 2s infinite;
+  padding: 1rem;
+}
+
+@keyframes textAnimation {
+  0% {
+    transform: scale(0.8);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+.animated-text {
+  animation: textAnimation 8s infinite;
+}
+
+
+/*      padding and margin  for the inputs and labels */
+#myForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#name {
+  margin: 1rem;
+}
+
+
+/*    willkommen popup on the index */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  width: 300px;
+  height: 200px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+
+.popup-show {
+  display: flex;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+
+/* the result of  the php/ajax namenspeicher */
+#result {
+  color: white;
+  padding: 2rem;
+  border: solid white 1px;
+  margin: 1rem;
+  display: none;
+  border-radius: 10px;
+  background: linear-gradient(0deg, rgb(8, 7, 7) 0%, rgba(76, 24, 69, 0.922) 100%);
+  opacity: 0.8;
+}
+
+
+
+
+/* Drag and drop */
+.draggable {
+  height: 8rem;
+  width: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20%;
+  font-size: 1.5rem;
+  cursor: grab;
+  border-radius: 50%;
+
+}
+
+.draggable1 {
+  background-image: url(img/alienWithout.png);
+  background-size: cover;
+
+}
+
+.draggable:hover {
+  box-shadow: 0 0 2rem #f5f6f8;
+}
+
+
+.draggable2 {
+  background-image: url(img/alienWithout.png);
+  background-size: cover;
+}
+
+.draggable3 {
+  background-image: url(img/alienWithout.png);
+  background-size: cover;
+}
+
+.draggable4 {
+  background-image: url(img/alienWithout.png);
+  background-size: cover;
+}
+
+.draggable5 {
+  background-image: url(img/alienWithout.png);
+  background-size: cover;
+}
+
+.droppable {
+  height: 20rem;
+  width: 20rem;
+  background-color: rgba(27, 91, 103, 0.922);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  background-image: url(img/ufo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20%;
+  color: black;
+}
+
+.containerInput {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+.containerInput input {
+  margin-right: 1rem;
+}
+
+.containerBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.startGame {
+  gap: 1rem;
+  padding: 2rem;
+  width: 1300px;
+  height: 600px;
+  border: 1px solid white;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background: linear-gradient(0deg, rgba(8, 7, 7, 0.5) 0%, rgba(76, 24, 69, 0.5) 100%);
+  opacity: 0.9;
+  position: relative;
+
+}
+
+
+
+/* heuchtenspiel */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  box-sizing: border-box;
+  /* Include padding and border in the total element size */
+}
+
+.startGame2 {
+  gap: 1rem;
+  padding: 4rem;
+  /* Add padding to create space inside the border */
+  border: 1px solid white;
+  /* Adjust the border size as needed */
+  box-sizing: border-box;
+  /* Include padding and border in the total element size */
+  border-radius: 10px;
+  opacity: 1;
+  background: linear-gradient(0deg, rgba(8, 7, 7, 0.5) 0%, rgba(76, 24, 69, 0.5) 100%);
+  opacity: 0.9;
+  position: relative;
+
+}
+
+#startGame2 {
+  display: block;
+  margin: 0 auto;
+  top: -25px;
+  position: relative;
+  text-align: center;
+
+}
+
+
+.imageVader1,
+.imageVader2,
+.imageVader3 {
+  width: 24rem;
+  height: 16rem;
+  cursor: pointer;
+  border-radius: 10px;
+
+}
+
+.gold {
+  display: none;
+  width: 24rem;
+  height: 16rem;
+}
+
+.tooltip-container {
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+
+}
+
+.tooltip-title {
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -1.5rem;
+  /* Adjust the value as needed */
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+
+
+/* responisive Ui Design */
+/* Customize jQuery UI elements */
+.ui-widget,
+.ui-collapsible-content {
+  background: linear-gradient(0deg, rgb(8, 7, 7) 0%, rgba(76, 24, 69, 0.922) 100%);
+  opacity: 0.9;
+}
+
+
+
+.ui-content {
+  min-height: 93vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(img/galaxy.jpg);
+  background-size: cover;
+}
+
+.ui-widget-content {
+  color: white;
+}
+
+.ui-tabs {
+  height: 35rem;
+  width: 35rem;
+}
+
+
+.ui-controlgroup,
+.ui-controlgroup-vertical {
+  width: 100%;
+  margin-top: 0 !important;
+
+}
+
+
+/* von 0 bis  768px 12px */
+@media (max-width: 768px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+/* zwischen 768px und 1024px ... normaler große16px */
+
+
+/* ab 1024 17px pixels */
+@media (min-width: 1024px) {
+  body {
+    font-size: 17px;
+  }
+}
+
+
+
+
+/* the Gameover popup */
+.popup2 {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+
+.popup-content2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.popup-content2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  width: 300px;
+  height: 200px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+
+.popup-show2 {
+  display: flex;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+
+/* live ticker */
+#ticker {
+  display: flex;
+  justify-content: center;
+}
